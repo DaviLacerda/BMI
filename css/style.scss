@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #191919;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+
+    width: 90%;
+    max-width: 720px;
+
+    height: 75%;
+    max-height: 720px;
+
+    padding: 16px;
+
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    
+
+    h1{
+        text-align: center;
+        color: #fff;
+        font-size: 1.8em;
+    }
+
+    h2{
+        text-align: center;
+        color: #fff;
+        font-size: 1.4em;
+    }
+
+    .bmi-calculator{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+
+        width: 50%;
+        max-width: 400px;
+
+        input[type=number], input[type=text]{
+            width: 100%;
+            padding: 8px;
+
+            text-align: center;
+
+            border: 1px solid #fff;
+            border-radius: 4px;
+        }
+
+        input[type=range]{
+            width: 100%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 2px;
+            background: #191919;
+            outline: none; 
+            opacity: 0.7; 
+            -webkit-transition: .2s; 
+            transition: .2s;
+
+            &:hover {
+                opacity: 1;
+            }
+            
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 20px;
+                height: 20px; 
+                background: #ffffff; 
+                border-radius: 50%;
+                cursor: pointer; 
+            }
+        }
+
+        .weight, .height{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+            width: 100%;
+        }
+    }
+
+    .results{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        .bmi-result{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .bmi-class{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
